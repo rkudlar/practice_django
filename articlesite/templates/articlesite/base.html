@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Django Articles Site</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'create_article' %}">Create Article</a></li>
+    </ul>
+</nav>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+</body>
+</html>

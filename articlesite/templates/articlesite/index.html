@@ -1,0 +1,12 @@
+{% extends 'articlesite/base.html' %}
+
+{% block content %}
+<h1>All Articles</h1>
+{% for article in articles %}
+<div>
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.body }}</p>
+    <a href="{% url 'article_detail' pk=article.pk %}">Read more</a>
+</div>
+{% endfor %}
+{% endblock %}
